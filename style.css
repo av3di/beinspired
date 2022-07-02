@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+* {margin: 0; padding: 0; text-align: center;};
+html
+{
+	height: 100%;
+	width: 100%;
+	/*font-family: 'Amatic SC', cursive;*/
+}
+body
+{
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	font-family: 'Poiret One', cursive;
+}
+canvas
+{
+	position: relative;
+	display: block;
+	z-index: 1;
+}
+h1, h2, h3, h4
+{
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+h1
+{
+	margin-top: 10px;
+	font-size: 40px;
+	color: #ffff00;
+}
+h2
+{
+	font-size: 28px;
+	color: #199DFF;
+}
+h3
+{
+	font-size: 22px;
+	color: #fff;
+}
+h3#final_score_heading
+{
+	color: #ffff00;
+}
+h3#final_score
+{
+	color: #ffff00;
+}
+h4
+{
+	font-size: 20px;
+	margin-top: 10px;
+	color: #fff;
+}
+p
+{
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+
+div.screen
+{
+	background-color: rgba(12,74,120, 0.7);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+div#start_screen
+{
+	z-index: 3;
+	opacity: 1;
+
+}
+div#game_over
+{
+	z-index: -5;
+	opacity: 0;
+}
+div#game_over h2
+{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+a
+{
+	color: #ffff00;
+	text-decoration: none;
+	transition: border 0.5s ease-in-out, color 0.5s ease-in-out;
+	-webkit-transition: border 0.5s ease-in-out, color 0.5s ease-in-out;
+	-moz-transition: border 0.5s ease-in-out, color 0.5s ease-in-out;
+	-o-transition: border 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+a:hover
+{
+	color: #199DFF;
+}
+p#error
+{
+	z-index: -1;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+a#start
+{
+	z-index: -3;
+	opacity: 0;
+	top: 50%;
+}
+a#restart
+{
+	top: 60%;
+}
+a.play_button {
+	position: absolute;
+	background-color: #ffff00;
+	text-align: left;
+	transition: all 0.5 ease-in-out;
+	-webkit-transition: all 0.5 ease-in-out;
+	-moz-transition: all 0.5 ease-in-out;
+}
+a.play_button:before,
+a.play_button:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+a.play_button,
+a.play_button:before,
+a.play_button:after {
+	width:  70px;
+	height: 70px;
+	border-top-right-radius: 30%;
+}
+
+a.play_button {
+	transform: rotate(30deg) skewX(-30deg) scale(1,.866);
+}
+a.play_button::before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+a.play_button::after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+
+a.play_button:hover
+{
+	background-color: #ffff7d;
+}
+
+div#info_status
+{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	z-index: 4;
+}
+div#score
+{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 28px;
+	text-align: right;
+	color: #ffff00;
+	opacity: 0;
+	z-index: 7;
+}

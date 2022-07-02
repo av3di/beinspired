@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Inspired - A WebGL Game</title>
+	<meta name="description" content="WebGL Game">
+	<meta name="keywords" content="WebGL, game, Three.js">
+	<meta name="author" content="Evonee Uribe">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#ff8900">
+	<meta name="msapplication-TileColor" content="#da532c">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="three.min.js"></script>
+	<script src="Mirror.js"></script>
+	<script src="WaterShader.js"></script>
+	<script src="ColladaLoader.js"></script>
+</head>
+<body>
+	<div id="start_screen" class="screen">
+		<h1>Inspired</h1>
+		<h2>A WebGL Game</h2>
+		<h3>Designed and Developed by Evonee Uribe</h3>
+		<a id="start" class="play_button" href="#"></a>
+		<div id="info_status">
+			<div id="load_status">
+				<p>Loading</p>
+				<div id="load_bar">0%</div>
+			</div>
+
+			<p id="error">Sorry, there was an error, while loading. Please refresh the page.</p>
+			<h4>Controls:<br>Arrow keys/Swipe - move left/right</h4>
+		</div>
+	</div>
+	<div id="game_over" class="screen">
+		<h2>Woah! You crashed into a crate, but it's okay. <br>Just try again</h2>
+		<h3 id="final_score_heading">Final Score</h3>
+		<h3 id="final_score"></h3>
+		<h3 id="high_score_heading">High Score</h3>
+		<h3 id="highest_score">0</h3>
+		<a id="restart" class="play_button" href="#"></a>
+	</div>
+	<div id="score">0</div>
+	<script src="main.js"></script>
+</body>
+</html>
